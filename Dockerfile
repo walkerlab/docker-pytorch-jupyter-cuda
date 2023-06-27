@@ -1,5 +1,5 @@
-ARG BASE_IMG_NAME
-FROM ${BASE_IMG_NAME}
+ARG BASE_IMG_TAG
+FROM ghcr.io/walkerlab/docker-pytorch:${BASE_IMG_TAG}
 LABEL maintainer="Edgar Y. Walker <eywalker@uw.edu>, Daniel Sitonic <sitonic@uw.edu>"
 RUN apt-get update && \
     apt-get install nodejs -y &&\
