@@ -7,7 +7,7 @@ jobs:
   docker-build:
     strategy:
       matrix:
-        BASE_IMG_NAME: [ghcr.io/walkerlab/docker-pytorch-cuda:cuda-11.8.0-pytorch-1.13.0-torchvision-0.14.0-torchaudio-0.13.0-ubuntu-22.04, ]
+        BASE_IMG_NAME: ["ghcr.io/walkerlab/docker-pytorch-cuda:cuda-11.8.0-pytorch-1.13.0-torchvision-0.14.0-torchaudio-0.13.0-ubuntu-22.04"]
     runs-on: ubuntu-latest
     permissions:
       packages: write
