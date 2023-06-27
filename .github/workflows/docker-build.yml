@@ -46,12 +46,7 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           context: .
           build-args: |
-            UBUNTU_VER=${{ matrix.UBUNTU_VER }}
-            CUDA_VER=${{ matrix.CUDA_VER }}
-            TORCH_VER=${{ matrix.TORCH_VER }}
-            TORCHAUDIO_VER=${{ matrix.TORCHAUDIO_VER }}
-            TORCHVISION_VER=${{ matrix.TORCHVISION_VER }}
-            PYTORCH_EXTRA_IDX_URL=${{ matrix.PYTORCH_EXTRA_IDX_URL }}
+            BASE_IMG_NAME=${{ matrix.BASE_IMG_NAME }}
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
           push: ${{ env.ON_MAIN_BRANCH == 'true' }}
